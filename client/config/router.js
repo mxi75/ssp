@@ -5,7 +5,7 @@ function isLoggedUser(){
 }
 
 function isEntrance(url){
-  return url === '/login';
+  return url === '/login' || url === '/register';
 }
 
 ApplicationController = RouteController.extend({
@@ -42,6 +42,11 @@ Router.route('/', function () {
 });
 
 Router.route('/login', function () {
-    this.layout(null);
+    this.layout('blankLayout');
     this.render('login');
+});
+
+Router.route('/register', function () {
+    this.layout('blankLayout');
+    this.render('register');
 });

@@ -1,0 +1,39 @@
+<template name="register">
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <h3 class="logo-name">SSP</h3>
+        </div>
+        <h3>Регистрация</h3>
+
+        <p>Создайте аккаунт для входа в Школу.</p>
+
+        <form class="m-t" role="form" action="#">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Фамилия" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Имя" required="">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Емейл" required="">
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                  <input type="checkbox" id="checkbox1">
+                  <label for="checkbox1">
+                      Согласен с <a href="">правилами</a> Школы
+                  </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b">Регистрация</button>
+
+            <p class="text-muted text-center">
+                <small>Уже есть аккаунт?</small>
+            </p>
+            <a class="btn btn-sm btn-white btn-block" href="{{pathFor route='login'}}">Вход</a>
+        </form>
+        <p class="m-t">
+            <small>Школа Михаила Шестова &copy; 2015</small>
+        </p>
+    </div>
+</template>
