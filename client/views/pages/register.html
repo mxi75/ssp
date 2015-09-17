@@ -5,25 +5,20 @@
         </div>
         <h3>Регистрация</h3>
 
-        <p>Создайте аккаунт для входа в Школу.</p>
+        <p>Создайте аккаунт для входа в Академию.</p>
 
-        <form class="m-t" role="form" action="#">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Фамилия" required="">
+        <form class="m-t" role="form" novalidate="">
+            <div class="form-group" data-field="lastName">
+                <span class="label label-danger validation-message"></span>
+                <input type="text" class="form-control last-name" placeholder="Фамилия" data-required="true" data-min-length="3">
             </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Имя" required="">
+            <div class="form-group" data-field="firstName">
+                <span class="label label-danger validation-message"></span>
+                <input type="text" class="form-control first-name" placeholder="Имя" data-required="true" data-min-length="3">
             </div>
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Емейл" required="">
-            </div>
-            <div class="form-group">
-              <div class="checkbox">
-                  <input type="checkbox" id="checkbox1">
-                  <label for="checkbox1">
-                      Согласен с <a href="">правилами</a> Школы
-                  </label>
-              </div>
+            <div class="form-group" data-field="email">
+                <span class="label label-danger validation-message"></span>
+                <input type="email" class="form-control" placeholder="Емейл" data-required="true" data-min-length="5">
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">Регистрация</button>
 
@@ -33,7 +28,18 @@
             <a class="btn btn-sm btn-white btn-block" href="{{pathFor route='login'}}">Вход</a>
         </form>
         <p class="m-t">
-            <small>Школа Михаила Шестова &copy; 2015</small>
+            <small>Академия Михаила Шестова &copy; 2015</small>
         </p>
     </div>
+</template>
+
+<template name="formsegment">
+  <div class="form-group">
+    <div class="checkbox">
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">
+            Согласен с <a href="">правилами</a> Школы
+        </label>
+    </div>
+  </div>
 </template>

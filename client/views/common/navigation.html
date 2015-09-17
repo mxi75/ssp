@@ -10,11 +10,15 @@
             <ul class="nav" id="side-menu">
               <li class="nav-header">
                   <div class="dropdown profile-element"> <span>
-                          <img alt="image" class="img-circle" src="img/shestov_small_logo.png" />
+                          <img alt="image" width="46" height="46" class="img-circle" src="img/unknown.jpeg" />
                            </span>
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                          <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Михаил Шестов</strong>
-                          </span> <span class="text-muted text-xs block">Основатель <b class="caret"></b></span> </span> </a>
+                          <span class="clear">
+                            <span class="block m-t-xs">
+                              <span class="font-bold">{{userName}} <i class="fa fa-gear"></i></span>
+                            </span>
+                          </span>
+                      </a>
                       <ul class="dropdown-menu animated fadeInRight m-t-xs">
                           <li><a href="{{pathFor route='profile'}}">Профиль</a></li>
                           <li><a href="{{pathFor route='contacts'}}">Контакты</a></li>
@@ -27,7 +31,7 @@
                   </div>
               </li>
                 <li class="{{isActiveRoute regex='school'}}">
-                    <a href="{{pathFor route='school'}}"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Школа</span> </a>
+                    <a href="{{pathFor route='school'}}"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Академия</span> </a>
                 </li>          <li class="{{isActiveRoute regex='chat'}}">
                     <a href="{{pathFor route='chat'}}"><i class="fa fa-weixin"></i> <span class="nav-label">Чат</span> </a>
                 </li>
